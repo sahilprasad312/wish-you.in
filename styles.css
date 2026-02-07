@@ -1,0 +1,126 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 50%;
+    color: #f9f9f9;
+    text-align: center;
+    padding: 0 24px;
+    z-index: 3;
+}
+
+.form.login {
+    translate: 100% 0;
+}
+
+.form.login.active {
+    translate: 0;
+}
+
+.form.register{
+    translate: -100% 0;
+}
+
+.form.register.active {
+    translate: 0;
+}
+
+.hero p {
+    margin: 0 0 6px;
+    color: #cac9d2;
+}
+
+.hero button {
+    padding: 12px 40 px;
+    border-radius: 32px;
+    letter-spacing: 1px;
+    font-family: inherit;
+    color: inherit;
+    border: 1px solid #f9f9f9;
+    background: transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    color: #3c23c9;
+    background: #f9f9f9;
+}
+
+.form {
+    background: #13111b;
+    z-index: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 32px;
+}
+
+* { box-sizing: border-box;}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 660px;
+    height: 440px;
+    border-radius: 16px;
+    background: #13111b;
+    border: 8px solid #13111b;
+}
+
+.card-bg {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background: #3c23c9;
+    border-radius: 12px;
+    translate: 0 0;
+    transition: 0.65s ease-in-out;
+}
+
+.card-bg.login {
+    translate: 100% 0;
+}
+
+.hero, .form{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.65s ease-in-out;
+}
+
+.hero.active, .form.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.form.register{
+    left: 50%;
+}
+
+.hero.login {
+    left: 50%;
+    translate: 100% 0;
+}
+
+.hero.login.active{
+    translate: 0;
+}
+
+.hero.register {
+    translate: -100% 0;
+}
+
+.hero.reister.active {
+    translate: 0;
+}
