@@ -64,18 +64,6 @@ Before running the application, configure the following environment variables in
 - `MONGODB_URI` – The MongoDB connection string.
 - Any other environment-specific settings required by the application.
 
-Example `.env` file:
 
-```env
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/wishyouin
-```
-
-Do not commit your .env file or sensitive credentials to version control.
-
----
-
-For more details, refer to the source code and comments within individual files.
-
----
-Source: https://app.docuwriter.ai/space/47014/item/575038
+## Website 
+Link : wish-you.in
