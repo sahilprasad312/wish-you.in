@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wish You.in | Birthday Wish Generator</title>
+  <meta
+    name="description"
+    content="Create a cute, romantic and premium birthday wish card with a photo, a memory and a few heartfelt details."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles-1.css">
+  <link rel="stylesheet" href="styles-2.css">
+  <link rel="stylesheet" href="styles-3.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div class="brand-mark">
+          <span class="brand-mark__icon">W</span>
+          <div>
+            <p class="eyebrow">Premium Birthday Wishes</p>
+            <h1>Wish You.in</h1>
+          </div>
+        </div>
+        <a class="ghost-link" href="#generator">Create a Wish</a>
+      </nav>
+
+      <div class="hero__content">
+        <section class="hero__copy">
+          <p class="eyebrow">Cute. Romantic. Premium.</p>
+          <h2>Turn one photo and one memory into a birthday message that feels personal.</h2>
+          <p class="hero__text">
+            Build a beautiful birthday card in seconds. Add a photo, tell us a little about them,
+            and generate a heartfelt wish you can copy, share or print.
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#generator">Start Creating</a>
+            <a class="button button--secondary" href="#preview-card">See Preview</a>
+          </div>
+          <ul class="hero__points">
+            <li>No login required</li>
+            <li>Works on phone and desktop</li>
+            <li>Designed for romantic birthday surprises</li>
+          </ul>
+        </section>
+
+        <aside class="hero-card hero-card--floating">
+          <div class="hero-card__shine"></div>
+          <p class="hero-card__label">Sample Wish</p>
+          <h3>For Someone Unforgettable</h3>
+          <p>
+            Happy Birthday to the one who makes ordinary days softer, brighter, and worth remembering.
+          </p>
+          <div class="hero-card__footer">
+            <span>Warm</span>
+            <span>Elegant</span>
+            <span>Romantic</span>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main>
+      <section class="features">
+        <article class="feature-card">
+          <p class="feature-card__number">01</p>
+          <h3>Upload a photo</h3>
+          <p>Place their favorite picture at the center of the final birthday card.</p>
+        </article>
+        <article class="feature-card">
+          <p class="feature-card__number">02</p>
+          <h3>Add meaningful details</h3>
+          <p>Share your bond, a memory, and the feeling you want the message to carry.</p>
+        </article>
+        <article class="feature-card">
+          <p class="feature-card__number">03</p>
+          <h3>Generate and share</h3>
+          <p>Get a polished birthday wish instantly, then copy it or print the card.</p>
+        </article>
+      </section>
+
+      <section class="generator" id="generator">
+        <div class="section-heading">
+          <p class="eyebrow">Birthday Wish Studio</p>
+          <h2>Make it feel like it was written for one person only.</h2>
+        </div>
+
+        <div class="generator__grid">
+          <form class="panel form-panel" id="wish-form" enctype="multipart/form-data">
+            <div class="form-row">
+              <label for="recipientName">Birthday person name</label>
+              <input id="recipientName" name="recipientName" type="text" placeholder="Aarav" maxlength="40" required>
+            </div>
+
+            <div class="form-row">
+              <label for="senderName">Your name</label>
+              <input id="senderName" name="senderName" type="text" placeholder="Your name" maxlength="40">
+            </div>
+
+            <div class="form-row">
+              <label for="relation">Your relation</label>
+              <select id="relation" name="relation">
+                <option value="love">Partner / Love</option>
+                <option value="best-friend">Best Friend</option>
+                <option value="crush">Someone Special</option>
+                <option value="wife">Wife</option>
+                <option value="husband">Husband</option>
+                <option value="fiance">Fiance / Fiancee</option>
+                <option value="friend">Friend</option>
+                <option value="family">Family</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="tone">Wish tone</label>
+              <select id="tone" name="tone">
+                <option value="romantic">Romantic</option>
+                <option value="sweet">Sweet</option>
+                <option value="deep">Deep and Emotional</option>
+                <option value="playful">Playful</option>
+                <option value="elegant">Elegant</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="traits">Three words about them</label>
+              <input
+                id="traits"
+                name="traits"
+                type="text"
+                placeholder="kind, dreamy, beautiful"
+                maxlength="90"
+              >
+            </div>
+
+            <div class="form-row">
+              <label for="memory">One special memory</label>
+              <textarea
+                id="memory"
+                name="memory"
+                rows="4"
+                placeholder="That late-night walk, your smile, and the way everything felt peaceful."
+                maxlength="240"
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="extra">Anything else you want included</label>
+              <textarea
+                id="extra"
+                name="extra"
+                rows="3"
+                placeholder="I want the message to mention their smile and how proud I am of them."
+                maxlength="200"
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="photo">Upload photo</label>
+              <input id="photo" name="photo" type="file" accept="image/*">
+            </div>
+
+            <div class="form-actions">
+              <button class="button button--primary" type="submit">Generate Wish</button>
+              <button class="button button--secondary" type="button" id="surprise-me">Surprise Me</button>
+            </div>
+            <p class="status-message form-status">
+              Submission details are saved after generation so you can review usage in your private dashboard.
+            </p>
+          </form>
+
+          <section class="panel preview-panel" id="preview-card">
+            <div class="wish-card" id="wish-card">
+              <div class="wish-card__image-wrap">
+                <img
+                  id="photo-preview"
+                  class="wish-card__image"
+                  src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=80"
+                  alt="Birthday preview"
+                >
+                <div class="wish-card__badge">Made with love</div>
+              </div>
+
+              <div class="wish-card__content">
+                <p class="eyebrow">Birthday Wish</p>
+                <h3 id="card-title">For your favorite person</h3>
+                <p class="wish-card__message" id="generated-message">
+                  Happy Birthday to the soul who makes life softer, brighter, and more beautiful with every passing day.
+                  May this year hold the same warmth, wonder, and tenderness that you bring into the lives around you.
+                </p>
+
+                <div class="wish-card__meta">
+                  <span id="message-tone">Romantic</span>
+                  <span id="message-relation">Partner / Love</span>
+                </div>
+
+                <p class="wish-card__signature" id="card-signature">With love, Someone who adores you</p>
+              </div>
+            </div>
+
+            <div class="preview-actions">
+              <button class="button button--primary" type="button" id="copy-message">Copy Message</button>
+              <button class="button button--secondary" type="button" id="share-message">Share</button>
+              <button class="button button--secondary" type="button" id="print-card">Print / Save PDF</button>
+            </div>
+
+            <p class="status-message" id="status-message" aria-live="polite"></p>
+          </section>
+        </div>
+      </section>
+
+      <section class="how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow">How It Works</p>
+          <h2>Built for simplicity, not complexity.</h2>
+        </div>
+        <div class="steps">
+          <article class="step">
+            <span>1</span>
+            <h3>Tell the story briefly</h3>
+            <p>Add their name, your relation, a memory and a few words that describe them.</p>
+          </article>
+          <article class="step">
+            <span>2</span>
+            <h3>Choose the feeling</h3>
+            <p>Switch between romantic, sweet, emotional, playful and elegant tones.</p>
+          </article>
+          <article class="step">
+            <span>3</span>
+            <h3>Share the result</h3>
+            <p>Copy the wish, use native share on mobile, or print the card as a keepsake.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
